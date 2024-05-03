@@ -449,6 +449,44 @@
         "url": "https://github.com/jothi-prasath/portainer-templates",
         "stackfile": "stacks/jellystat/docker-compose.yml"
       }
-    }    
+    },
+    {
+      "categories": [],
+      "description": "Reiverr is a clean combined interface for Jellyfin, TMDB, Radarr and Sonarr, as well as a replacement to Overseerr.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "Asia/Kolkata",
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "image": "louislam/uptime-kuma:1",
+      "logo": "https://github.com/louislam/uptime-kuma/blob/master/public/icon.png",
+      "name": "Uptime kuma",
+      "platform": "linux",
+      "network": "host",
+      "ports": [
+        "3001:3001"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Uptime Kuma",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/mnt/HDD1/portainer/uptime-kuma",
+          "container": "/app/data"
+        }
+      ]
+    }      
   ]
 }
